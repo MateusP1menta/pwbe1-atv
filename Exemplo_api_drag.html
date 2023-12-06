@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+    #div1, #div2 {
+    float: left;
+    width: 150px;
+    height: 145px;
+    margin: 10px;
+    padding: 10px;
+    border: 4px solid rgb(46, 49, 218);
+}
+</style>
+<script>
+    function permitirSoltar(ev) {
+    ev.preventDefault();
+    }
+    
+    function arrastar(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+    }
+    
+    function soltar(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+    }
+</script>
+</head>
+<body>
+    <div id="div1" ondrop="soltar(event)" ondragover="permitirSoltar(event)">
+    <img src="../Layout 2/IMG/google.png" draggable="true" ondragstart="arrastar(event)" id="arrastar"  height="141">
+    </div>
+    
+    <div id="div2" ondrop="soltar(event)" ondragover="permitirSoltar(event)"></div>
+</body>
+</html>

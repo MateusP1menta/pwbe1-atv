@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="produtos">Selecione um Produto</label>
+    <select id="produtos" aria-label="selecione  um produto">
+        <option value="1">Item 1</option>
+        <option value="2">Item 2</option>
+        <option value="3">Item 3</option>
+    </select>
+    <p id="descricao-produto">descriçao do produto <span id="descProduto"> </p>
+        <style>
+            [aria-label]{
+                border: 2px solid blue;
+            }
+        </style>
+    <script>
+        menuButton.addEventListener("change", () => {
+            const descProduto = descProduto.value;
+            const descricaoProduto = document.getElementById("descricao-produto");
+            descricaoProduto = descricaoProduto[descProduto];
+        });
+    </script>
+</body>
+</html>
